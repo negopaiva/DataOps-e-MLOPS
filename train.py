@@ -120,7 +120,7 @@ def config_mlflow():
         None
     """
     os.environ['MLFLOW_TRACKING_USERNAME'] = 'negopaiva'
-    os.environ['MLFLOW_TRACKING_PASSWORD'] = 'd7da0c3c6de5b2c1455749b3a2794b713c2a36a5'
+    os.environ['MLFLOW_TRACKING_PASSWORD'] = 'ff454bf4d79befe1d31ad7698d21053f6f0bb922'
     mlflow.set_tracking_uri('https://dagshub.com/negopaiva/DataOps-e-MLOPS.mlflow')
 
     mlflow.keras.autolog(log_models=True,
