@@ -119,9 +119,9 @@ def config_mlflow():
     Returns:
         None
     """
-    os.environ['MLFLOW_TRACKING_USERNAME'] = 'renansantosmendes'
-    os.environ['MLFLOW_TRACKING_PASSWORD'] = '6d730ef4a90b1caf28fbb01e5748f0874fda6077'
-    mlflow.set_tracking_uri('https://dagshub.com/renansantosmendes/mlops-ead-2025.mlflow')
+    os.environ['MLFLOW_TRACKING_USERNAME'] = 'negopaiva'
+    os.environ['MLFLOW_TRACKING_PASSWORD'] = 'd7da0c3c6de5b2c1455749b3a2794b713c2a36a5'
+    mlflow.set_tracking_uri('https://dagshub.com/negopaiva/DataOps-e-MLOPS.mlflow/#/models')
 
     mlflow.keras.autolog(log_models=True,
                          log_input_examples=True,
@@ -143,7 +143,7 @@ def train_model(model, X_train, y_train, is_train=True):
     Returns:
     None
     """
-    with mlflow.start_run(run_name='experiment_mlops_ead') as run:
+    with mlflow.start_run(run_name='fetal_health') as run:
         model.fit(X_train,
                   y_train,
                   epochs=50,

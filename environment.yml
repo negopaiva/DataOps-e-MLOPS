@@ -2,23 +2,23 @@ name: mlops-env
 channels:
   - conda-forge
   - defaults
+
 dependencies:
-  # Python e ferramentas básicas
-  - python=3.12
+  # Python compatível com MLflow + TensorFlow
+  - python=3.10
   - pip
   - git
   - curl
 
-  # Pacotes científicos via conda (melhor performance)
+  # Pacotes científicos
   - numpy=1.26.4
   - pandas=2.2.3
-  - matplotlib=3.9.2
-  - scikit-learn=1.7.0
+  - matplotlib
+  - scikit-learn=1.5.2
 
-  # Jupyter para desenvolvimento
-  - jupyter
+  # Jupyter
   - jupyterlab
 
-  # Pacotes pip específicos
+  # Pip
   - pip:
       - -r requirements.txt
